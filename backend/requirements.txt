@@ -1,0 +1,14 @@
+Flask==3.0.0
+SQLAlchemy==2.0.25
+PyMySQL==1.1.0
+psycopg2-binary==2.9.9
+cx-Oracle==8.3.0
+pyodbc==5.0.1
+python-dotenv==1.0.0
+PyYAML==6.0.1
+marshmallow==3.20.1
+marshmallow-dataclass==8.6.0
+pytest==7.4.4
+black==23.12.1
+flake8==7.0.0
+mypy==1.8.0

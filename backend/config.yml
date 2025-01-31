@@ -1,0 +1,52 @@
+# Database configurations
+databases:
+  mysql:
+    pool_size: 5
+    max_overflow: 10
+    pool_timeout: 30
+    pool_recycle: 3600
+
+  oracle:
+    pool_size: 5
+    max_overflow: 10
+    pool_timeout: 30
+    pool_recycle: 3600
+
+  postgresql:
+    pool_size: 5
+    max_overflow: 10
+    pool_timeout: 30
+    pool_recycle: 3600
+
+  mssql:
+    pool_size: 5
+    max_overflow: 10
+    pool_timeout: 30
+    pool_recycle: 3600
+
+# Logging configuration
+logging:
+  version: 1
+  formatters:
+    default:
+      format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  handlers:
+    console:
+      class: logging.StreamHandler
+      formatter: default
+      level: INFO
+    file:
+      class: logging.FileHandler
+      formatter: default
+      filename: 'logs/app.log'
+      level: DEBUG
+  root:
+    level: INFO
+    handlers: [console, file]
+
+# API configuration
+api:
+  host: '0.0.0.0'
+  port: 5000
+  debug: true
+  secret_key: 'your-secret-key-here'  # Mude isso em produção
